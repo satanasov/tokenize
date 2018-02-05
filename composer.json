@@ -1,0 +1,29 @@
+{
+	"name": "anavaro/tokenize",
+	"type": "phpbb-extension",
+	"description": "Extension that should requre users to use tokens to execute actions in specific forums",
+	"homepage": "",
+	"version": "0.1",
+	"time": "2018-02-18",
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "Stanislav Atanasov",
+			"email": "lucifer@anavaro.com",
+			"homepage": "http://anavaro.com",
+			"role": "Lead Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.3"
+	},
+	"require-dev": {
+		"phpbb/epv": "dev-master"
+	},
+	"extra": {
+		"display-name": "phpBB 3.2 Tokenize",
+		"soft-require": {
+			"phpbb/phpbb": ">=3.1.0-RC2,<3.2.*@dev"
+		}
+	}
+}

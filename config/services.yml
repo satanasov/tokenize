@@ -1,0 +1,10 @@
+services:
+    anavaro.tokenize.listener:
+        class: anavaro\tokenize\event\main_listener
+        arguments:
+            - '@user'
+            - '@config'
+            - '@dbal.conn'
+            - '@template'
+        tags:
+            - { name: event.listener }
