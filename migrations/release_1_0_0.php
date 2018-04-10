@@ -16,21 +16,18 @@ class release_1_0_0 extends \phpbb\db\migration\migration
 	public function update_data()
 	{
 		return array(
+		array('permission.add', array('a_anavaro_tokenize', true, 'a_board')),
 			array('config.add', array('tokenize_use_forums', '190')),
 			array('config.add', array('tokenize_post_rate', '5')),
 			array('config.add', array('tokenize_bump_rate', '1')),
 
-			// Add permission
-			array('permission.add', array('a_tokenize', true)),
-			// Set permissions
-			array('permission.permission_set', array('ROLE_ADMIN_FULL', 'a_tokenize')),
-			array('permission.permission_set', array('ROLE_ADMIN_STANDARD', 'a_tokenize')),
-
-			array('module.add', array('acp', 'ACP_CAT_DOT_MODS', 'ACP_TOKENIZE')),
+			array('module.add', array('acp', 'ACP_CAT_DOT_MODS', 'ACP_TOKENIZE_GRP')),
 			array('module.add', array(
-				'acp', 'ACP_TOKENIZE', array(
+				'acp', 'ACP_TOKENIZE_GRP', array(
 					'module_basename'	=> '\anavaro\tokenize\acp\tokenize_module',
-					'modes'				=> array('config'),
+					'module_langname'	=> 'TOKINIZE_CONFIG',
+					'module_mode'		=> 'config',
+					'module_auth'		=> 'ext_anavaro/tokenize && acl_a_anavaro_tokenize',
 				),
 			)),
 		);

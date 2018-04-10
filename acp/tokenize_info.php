@@ -14,13 +14,13 @@ class tokenize_info
 	public function module()
 	{
 		return array(
-			'filename'	=> '\anavaro\tokenize\acp\tokenize_module',
-			'title'		=> 'ACP_TOKENIZE',
+			'title'		=> 'ACP_TOKENIZE_GRP',
+			'version'	=> '1.0.0',
 			'modes'		=> array(
 				'config'	=> array(
 					'title' => 'ACP_TOKENIZE_CONFIG',
-					'auth' => 'ext_phpbb/tokenize && acl_a_tokenize',
-					'cat' => array('ACP_TOKENIZE')
+					'auth' => 'ext_anavaro/tokenize && acl_a_anavaro_tokenize'
+					'cat' => array('ACP_TOKENIZE_GRP')
 				),
 			),
 		);

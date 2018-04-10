@@ -1,0 +1,44 @@
+<!-- INCLUDE overall_header.html -->
+
+	<a name="maincontent"></a>
+		<h1>{L_TOKENIZE_CONFIG}</h1>
+		<p>{L_TOKENIZE_CONFIG_EXPLAIN}</p>
+
+		<form id="acp_tokenize_config" method="post" action="{U_ACTION}">
+			<fieldset>
+			<legend>{L_TOKENIZE_CONFIG}</legend>
+			<dl>
+				<dt>
+					<label>{L_TOKENIZE_USE_FORUMS}</label><br />
+					<span>{L_TOKENIZE_USE_FORUMS_EXPLAIN}</span>
+				</dt>
+				<dd>
+					<label><input type="text" size="6" id="tokenize_use_forums" name="tokenize_use_forums" class="post" value="{S_TOKENIZE_USE_FORUM}"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt>
+					<label>{L_TOKENIZE_POST_RATE}</label><br />
+					<span>{L_TOKENIZE_POST_RATE_EXPLAIN}</span>
+				</dt>
+				<dd>
+					<label><input type="text" size="6" id="tokenize_post_rate" name="tokenize_post_rate" class="post" value="{S_TOKENIZE_POST_RATE}"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt>
+					<label>{L_TOKENIZE_BUMP_RATE}</label><br />
+					<span>{L_TOKENIZE_BUMP_RATE_EXPLAIN}</span>
+				</dt>
+				<dd>
+					<label><input type="text" size="6" id="tokenize_bump_rate" name="tokenize_bump_rate" class="post" value="{S_TOKENIZE_BUMP_RATE}"></label>
+				</dd>
+			</dl>
+			</fieldset>
+			<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+			
+		</form>
+
+<!-- INCLUDE overall_footer.html -->
